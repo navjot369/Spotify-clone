@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link href="./Styles/style-index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="side-top sidebar-inner">
+                <a href="./">
+                    <div class="sidebar-icon-cont">
+                        <div class="svg-icon-cont">
+                            <svg height="25px" width="25px" viewBox="0 0 512 512" fill="#fff">
+                                <path class="st0"
+                                    d="M453.794,170.688L283.185,10.753c-15.287-14.337-39.083-14.337-54.37,0L58.206,170.688 c-8.012,7.515-12.565,18.01-12.565,29V472.25c0,21.954,17.803,39.75,39.75,39.75h120.947V395.145h99.324V512h120.946 c21.947,0,39.751-17.796,39.751-39.75V199.688C466.359,188.698,461.805,178.203,453.794,170.688z"
+                                    fill="white">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="sidebar-top-title">Home</div>
+                    </div>
+                </a>
+                <a href="./">
+                    <div class="sidebar-icon-cont">
+                        <div class="svg-icon-cont"><svg height="25px" width="25px" viewBox="0 0 24 24" fill="none">
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <path
+                                    d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                                    stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="sidebar-top-title">Search</div>
+                    </div>
+                </a>
+            </div>
+            <div class="side-bottom sidebar-inner">
+                <button onclick="toogleSidebar()" class="toogle-button sidebar-icon-cont">
+                        <div class="svg-icon-cont">
+                            <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none">
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path opacity="0.5"
+                                        d="M19.5617 7C19.7904 5.69523 18.7863 4.5 17.4617 4.5H6.53788C5.21323 4.5 4.20922 5.69523 4.43784 7M17.4999 4.5C17.5283 4.24092 17.5425 4.11135 17.5427 4.00435C17.545 2.98072 16.7739 2.12064 15.7561 2.01142C15.6497 2 15.5194 2 15.2588 2H8.74099C8.48035 2 8.35002 2 8.24362 2.01142C7.22584 2.12064 6.45481 2.98072 6.45704 4.00434C6.45727 4.11135 6.47146 4.2409 6.49983 4.5"
+                                        stroke="#fff" stroke-width="1.5"></path>
+                                    <path d="M15 18H9" stroke="#aaa" stroke-width="1.5" stroke-linecap="round"></path>
+                                    <path
+                                        d="M2.38351 13.793C1.93748 10.6294 1.71447 9.04765 2.66232 8.02383C3.61017 7 5.29758 7 8.67239 7H15.3276C18.7024 7 20.3898 7 21.3377 8.02383C22.2855 9.04765 22.0625 10.6294 21.6165 13.793L21.1935 16.793C20.8437 19.2739 20.6689 20.5143 19.7717 21.2572C18.8745 22 17.5512 22 14.9046 22H9.09536C6.44881 22 5.12553 22 4.22834 21.2572C3.33115 20.5143 3.15626 19.2739 2.80648 16.793L2.38351 13.793Z"
+                                        stroke="#fff" id="toggle-fill" stroke-width="1.5"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="sidebar-top-title">Your Library</div>
+                </button>
+                <div id="side-toggle-opt" class="side-cont2">
+                    <div class="side-types">
+                        <span class="side-type">Music</span>
+                        <span class="side-type">Podcasts</span>
+                        <span class="side-type">Party</span>
+                        <span class="side-type">Study</span>
+                        <span class="side-type">Favourite</span>
+                        <span class="side-type">Punjabi</span>
+                    </div>
+                    <div class="side-types2">
+                        <div class="search-icon" title="Search">
+                            <svg height="20px" width="25px" viewBox="0 0 24 24" fill="none">
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <path
+                                    d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                                    stroke="#eee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="recent-cont-outer">
+                            <button class="recent-button">Recent <img src="./IMages/three-bars.svg"></button>
+                        </div>
+                    </div>
+                </div>
+                <div id="up-down-toggle" class="side-list-cont">
+                    <div class="side-item">
+                        <img src="./Images/save-ribbon.svg">
+                        <div class="side-item-inner">
+                            <p class="item-inner1">Your Episodes</p>
+                            <p class="item-inner2">Saved and downloaded episodes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <button popovertarget="not-avail">Install App</button>
+        </div>
+        <div class="bottom"></div>
+    </div>
+    <div popover id="not-avail">This feature is not available yet!</div>
+    <script src="./Scripts/script-index.js"></script>
+</body>
+
+</html>
