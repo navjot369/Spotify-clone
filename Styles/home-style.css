@@ -1,0 +1,185 @@
+#main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 8px;
+}
+
+#home-cont {
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#home-cont::-webkit-scrollbar {
+    background: transparent;
+    width: 16px;
+}
+#home-cont::-webkit-scrollbar-thumb{
+    background-clip: padding-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 4px solid transparent;
+    border-radius: 16px;
+}
+
+#home-top-bar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0px 10px 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0 ;
+}
+.navigation-cont {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation-icon{
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+.forward-nav{
+    transform: rotate(180deg);
+    cursor: not-allowed;
+    filter: brightness(0.5);
+}
+.top-nav-right-cont {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    text-wrap: nowrap;
+}
+.top-nav-right-cont button{
+    text-wrap: nowrap;
+}
+.explore-premium {
+    padding: 8px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    font-size: 12px;
+    font-weight: bolder;
+    margin: 0 5px;
+}
+.install-app {
+    padding: 8px 12px;
+    background-color: rgba(30, 30, 30, 0.5);
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: bolder;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.install-app img {
+    height: 15px;
+    width: 15px;
+    margin-right: 4px;
+}
+.notifications {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.5);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
+.notifications img {
+    width: 20px;
+    height: 20px;
+}
+.profile-cont {
+    background-color: #106079;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0 6px;
+    margin: 0 5px;
+    font-size: 19px;
+    border: 2px solid rgba(30, 30, 30);
+}
+#main-inner-cont {
+    width: 100%;
+    height: 200vh;
+    padding: 10px 10px 20px 20px;
+}
+#good-times {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.times-playlist-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.times-playlist-item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 50px;
+    align-items: center;
+    border-radius: 7px;
+    height: 50px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 200ms ease-in 0s;
+    min-width: 250px;
+    width: 32%;
+    margin: 5px;
+}
+.times-playlist-item div:first-child{
+    height: 50px;
+    box-shadow: 0 0 30px black;
+}
+.times-banner {
+    width: 50px;
+    height: 100%;
+}
+.times-content {
+    padding: 0 12px 0 10px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+.times-playlist-item .play-button {
+    width: 30px;
+    height: 30px;
+    transition: all 200ms ease-in 0s;
+    box-shadow: 3px 3px 10px -4px black;
+    border-radius: 50%;
+    transform: scale(0);
+}
+.times-playlist-item:hover {
+    background-color: rgba(200, 200, 200, 0.2);
+}
+.times-playlist-item:hover .play-button{
+    transform: scale(1);
+}
+.times-playlist-item:hover .play-button:hover {
+    transform: scale(1.2);
+}
+
+
+
+#view-detail-cont {
+    width: 0px;
+    height: 100%;
+    background-color: #121212;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 200ms ease-in 0s;
+}
