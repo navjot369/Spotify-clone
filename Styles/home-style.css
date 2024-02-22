@@ -4,6 +4,8 @@
     display: grid;
     grid-template-columns: 1fr auto;
     column-gap: 8px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 #home-cont {
@@ -27,6 +29,7 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
     padding: 10px 0px 10px 20px;
     display: flex;
     align-items: center;
@@ -60,6 +63,11 @@
 }
 .top-nav-right-cont button{
     text-wrap: nowrap;
+    transition: all 100ms ease-in 0s;
+
+}
+.top-nav-right-cont button:hover {
+    transform: scale(1.07);
 }
 .explore-premium {
     padding: 8px;
@@ -111,19 +119,23 @@
     font-size: 19px;
     border: 2px solid rgba(30, 30, 30);
 }
+.profile-cont .tooltip {
+    left: -20px;
+}
 #main-inner-cont {
     width: 100%;
-    height: 200vh;
-    padding: 10px 10px 20px 20px;
+    padding: 10px 0 20px 20px;
 }
-#good-times {
+.title-list {
     font-size: 2rem;
     font-weight: bolder;
+    margin-bottom: 0px;
+    margin-top: 30px;
 }
 .times-playlist-cont {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transition: all 200ms linear 0s;
 }
 .times-playlist-item {
     display: grid;
@@ -135,8 +147,6 @@
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.5);
     transition: all 200ms ease-in 0s;
-    min-width: 250px;
-    width: 32%;
     margin: 5px;
 }
 .times-playlist-item div:first-child{
@@ -173,13 +183,137 @@
     transform: scale(1.2);
 }
 
+.list-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    padding: 20px;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.track-outer-cont {
+    min-width: 14%;
+    height: inherit;
+    padding: 10px;
+    border-radius: 10px;
+    background: #222;
+    transition: all 200ms ease-in 0s;
+}
+.banner-main {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+}
+.img-cont {
+    position: relative;
+    overflow: hidden;
+    height: min-content;
+    aspect-ratio: 1 / 1;
+}
+.track-outer-cont .play-button {
+    width: 40px;
+    height: 40px;
+    transition: all 200ms ease-in 0s;
+    box-shadow: 3px 3px 10px -4px black;
+    border-radius: 50%;
+    transform: scale(0.5);
+    opacity: 0;
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    box-shadow: 2px 2px 4px black;
+}
+.track-outer-cont:hover{
+    filter: brightness(1.1);
+    transform: scale(1.04);
+}
+.track-outer-cont:hover .play-button{
+    transform: scale(0.9);
+    opacity: 0.9;
+}
+.track-outer-cont:hover .play-button:hover{
+    transform: scale(1);
+    opacity: 1;
+}
+.banner-song {
+    font-size: 1rem;
+    margin: 10px 0 5px 3px;
+    font-weight: bold;
+}
+.banner-singer{
+    font-size: 0.7rem;
+    margin: 5px 3px;
+    color: #aaa;
+    width: inherit;
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+}
 
 
 #view-detail-cont {
-    width: 0px;
+    width: 0;
     height: 100%;
     background-color: #121212;
     border-radius: 10px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: opacity 200ms ease-in 100ms, width 150ms ease-in 0s;
+}
+#view-detail-cont::-webkit-scrollbar {
+    background: transparent;
+    width: 16px;
+}
+#view-detail-cont::-webkit-scrollbar-thumb{
+    background-clip: padding-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 4px solid transparent;
+    border-radius: 16px;
+}
+#detail-banner-title {
+    font-size: 2rem;
+    margin: 30px 15px;
+    text-transform: uppercase;
+}
+#detail-banner {
+    width: 95%;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+#artist-cont {
+    margin: 40px 15px 20px;
+    background-color: rgba(100, 100, 100, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+}
+#artist-cont h3{
+    margin: 10px 0 0px;
+}
+.singer-d1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ccc;
+}
+.singer-d1 button{
+    width: fit-content;
+    padding: 10px 20px;
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
     transition: all 200ms ease-in 0s;
+    font-weight: bold;
+}
+.about-artist-text {
+    font-size: 1rem;
+    margin: 10px 0 0;
+}
+.singer-about {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 2px 0;
 }

@@ -25,18 +25,24 @@
     transition: all 200ms linear 0s;
 }
 .banner-up {
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    transform: rotate(90deg) scale(1, 1.2);
-    padding-left: 5px;
     opacity: 0;
     position: absolute;
-    top: 3px;
-    right: 3px;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: default;
     transition: all 200ms linear 0s;
+}
+.banner-up img {
+    width: 50%;
+    height: 50%;
+    opacity: 0.5;
 }
 .b-banner-cont:hover {
     filter: brightness(0.7);

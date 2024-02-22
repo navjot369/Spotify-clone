@@ -156,3 +156,9 @@
     color: #aaa;
     margin: 0;
 }
+.sidebar-banner {
+    border-radius: 5px;
+}
+.sidebar-banner-circle {
+    border-radius: 50%;
+}

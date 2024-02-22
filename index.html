@@ -13,6 +13,10 @@
 </head>
 
 <body>
+    <div id="loading-anim">
+        <img src="/Icons/icon.svg">
+        <h1>Spotify</h1>
+    </div>
     <div class="main-container">
         <div class="sidebar">
             <div class="side-top sidebar-inner">
@@ -34,8 +38,8 @@
                 </button>
             </div>
             <div class="side-bottom sidebar-inner">
-                <button class="toogle-button sidebar-icon-cont sidebar-top-link">
-                    <div class="svg-icon-cont" onclick="toogleSidebar()">
+                <button class="toogle-button sidebar-icon-cont sidebar-top-link" onclick="toogleSidebar()">
+                    <div class="svg-icon-cont">
                         <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none">
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
@@ -71,10 +75,59 @@
                 </div>
                 <div id="up-down-toggle" class="side-list-cont">
                     <div class="side-item">
-                        <img src="./Icons/save-ribbon.svg">
+                        <img class="sidebar-banner" src="./Icons/save-ribbon.svg">
                         <div class="side-item-inner">
                             <p class="item-inner1">Your Episodes</p>
                             <p class="item-inner2">Saved and downloaded episodes</p>
+                        </div>
+                    </div>
+                    <div class="side-item">
+                        <img class="sidebar-banner-circle" src="./Images/Ittar.jpeg">
+                        <div class="side-item-inner">
+                            <p class="item-inner1">Jasmine Sandlas</p>
+                            <p class="item-inner2">Artist</p>
+                        </div>
+                    </div>
+                    <div class="side-item">
+                        <img class="sidebar-banner" src="./Images/diljit_banner.jpeg">
+                        <div class="side-item-inner">
+                            <p class="item-inner1">Diljit Dosanjh Radio</p>
+                            <p class="item-inner2">Playlist &#9679; Made for You</p>
+                        </div>
+                    </div>
+                    <div class="side-item">
+                        <img class="sidebar-banner" src="./Images/top50_global.jpg">
+                        <div class="side-item-inner">
+                            <p class="item-inner1">Top 50 - Global</p>
+                            <p class="item-inner2">Playlist &#9679; Spotify</p>
+                        </div>
+                    </div>
+                    <div class="side-item">
+                        <img class="sidebar-banner-circle" src="./Images/divine_photo.jpeg">
+                        <div class="side-item-inner">
+                            <p class="item-inner1">Divine</p>
+                            <p class="item-inner2">Artist</p>
+                        </div>
+                    </div>
+                    <div class="side-item">
+                        <img class="sidebar-banner" src="./Images/viral50_india.jpg">
+                        <div class="side-item-inner">
+                            <p class="item-inner1">Viral 50 - India</p>
+                            <p class="item-inner2">Playlist &#9679; Spotify</p>
+                        </div>
+                    </div>
+                    <div class="side-item">
+                        <img class="sidebar-banner" src="./Images/group1_pb.jpeg">
+                        <div class="side-item-inner">
+                            <p class="item-inner1">Punjabi Pump</p>
+                            <p class="item-inner2">Playlist &#9679; Spotify</p>
+                        </div>
+                    </div>
+                    <div class="side-item">
+                        <img class="sidebar-banner" src="./Images/kanye_thisis.jpg">
+                        <div class="side-item-inner">
+                            <p class="item-inner1">This is Kayne West</p>
+                            <p class="item-inner2">Playlist &#9679; Artist</p>
                         </div>
                     </div>
                 </div>
@@ -115,7 +168,7 @@
                     </div>
                     <div id="main-inner-cont">
                         <div id="wishing-cont">
-                            <h1 id="good-times"></h1>
+                            <h1 id="good-times" class="title-list" ></h1>
                             <div class="times-playlist-cont">
                                 <div class="times-playlist-item">
                                     <div>
@@ -123,7 +176,7 @@
                                     </div>
                                     <div class="times-content">
                                         <p>Trending Punjabi</p>
-                                        <img class="play-button" src="./Icons/play-main.svg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(12)">
                                     </div>
                                 </div>
                                 <div class="times-playlist-item">
@@ -132,7 +185,7 @@
                                     </div>
                                     <div class="times-content">
                                         <p>Top 50 - Global</p>
-                                        <img class="play-button" src="./Icons/play-main.svg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(9)">
                                     </div>
                                 </div>
                                 <div class="times-playlist-item">
@@ -141,7 +194,7 @@
                                     </div>
                                     <div class="times-content">
                                         <p>This is Taylor Swift</p>
-                                        <img class="play-button" src="./Icons/play-main.svg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(7)">
                                     </div>
                                 </div>
                                 <div class="times-playlist-item">
@@ -150,7 +203,7 @@
                                     </div>
                                     <div class="times-content">
                                         <p>Punjabi Pump</p>
-                                        <img class="play-button" src="./Icons/play-main.svg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(11)">
                                     </div>
                                 </div>
                                 <div class="times-playlist-item">
@@ -159,7 +212,7 @@
                                     </div>
                                     <div class="times-content">
                                         <p>Softly</p>
-                                        <img class="play-button" src="./Icons/play-main.svg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(1)">
                                     </div>
                                 </div>
                                 <div class="times-playlist-item">
@@ -168,14 +221,272 @@
                                     </div>
                                     <div class="times-content">
                                         <p>Top Songs India</p>
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(3)">
+                                    </div>
+                                </div>
+                            </div>
+                            <h1 class="title-list">Recently Played</h1>
+                            <div class="list-container">
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/100_Million.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(2)">
+                                    </div>
+                                    <div class="banner-song">100 Million</div>
+                                    <div class="banner-singer">Divine, Karan Aujla</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/group1_pb.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(0)">
+                                    </div>
+                                    <div class="banner-song">Punjabi Pump</div>
+                                    <div class="banner-singer"><span>Catch the hottest punjabi tracks</span></div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/street-dreams.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(3)">
+                                    </div>
+                                    <div class="banner-song">Straight Ballin</div>
+                                    <div class="banner-singer">Karan Aujla</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/viral50_global.jpg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(8)">
+                                    </div>
+                                    <div class="banner-song">Viral 50 - Global</div>
+                                    <div class="banner-singer">Your daily update of the most viral tracks</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/Black Space.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(7)">
+                                    </div>
+                                    <div class="banner-song">Black Space</div>
+                                    <div class="banner-singer">Taylor Swift</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/Udaarian.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(5)">
+                                    </div>
+                                    <div class="banner-song">Udaarian</div>
+                                    <div class="banner-singer">Satinder Sartaj</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/love-ya.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(0)">
+                                    </div>
+                                    <div class="banner-song">Love Ya</div>
+                                    <div class="banner-singer">Diljit Dosanjh</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/Saade Kothe Utte.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(6)">
+                                    </div>
+                                    <div class="banner-song">Saade Kothe Utte</div>
+                                    <div class="banner-singer">Ammy Virk</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/love-ya.jpeg">
                                         <img class="play-button" src="./Icons/play-main.svg">
                                     </div>
+                                    <div class="banner-song">Love Ya</div>
+                                    <div class="banner-singer">Diljit Dosanjh</div>
+                                </div>
+                            </div>
+                            <h1 class="title-list">Featured Chart</h1>
+                            <div class="list-container">
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/top50_global.jpg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(7)">
+                                    </div>
+                                    <div class="banner-song">Top 50 - Global</div>
+                                    <div class="banner-singer">Your daily update of the most played tracks</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/viral50_india.jpg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(3)">
+                                    </div>
+                                    <div class="banner-song">Viral 50 - India</div>
+                                    <div class="banner-singer">Your daily update of the most viral tracks</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/top50_india.jpg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(2)">
+                                    </div>
+                                    <div class="banner-song">Top 50 - India</div>
+                                    <div class="banner-singer">Your daily update of the most played tracks</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/topsongs_global.jpg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(9)">
+                                    </div>
+                                    <div class="banner-song">Top Song</div>
+                                    <div class="banner-singer">Your weekly update of the most played tracks right</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/viral50_global.jpg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(8)">
+                                    </div>
+                                    <div class="banner-song">Viral 50 - Global</div>
+                                    <div class="banner-singer">Your daily update of the most viral tracks</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/topsongs_india.jpg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(0)">
+                                    </div>
+                                    <div class="banner-song">Top Songs - India</div>
+                                    <div class="banner-singer">Your daily update of the most played tracks</div>
+                                </div>
+                            </div>
+                            <h1 class="title-list">Punjabi Mood Booster</h1>
+                            <div class="list-container">
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/Chandigarh Ka Chokra.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(4)">
+                                    </div>
+                                    <div class="banner-song">Chandigarh Ka Chokra</div>
+                                    <div class="banner-singer">Sunanda Sharma</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/Saade Kothe Utte.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(6)">
+                                    </div>
+                                    <div class="banner-song">Saade Kothe Utte</div>
+                                    <div class="banner-singer">Ammy Virk</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/Photo.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(10)">
+                                    </div>
+                                    <div class="banner-song">Photo</div>
+                                    <div class="banner-singer">Nimrat Khaira</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/softly.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(1)">
+                                    </div>
+                                    <div class="banner-song">Softly</div>
+                                    <div class="banner-singer">Karan Aujla</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/love-ya.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(0)">
+                                    </div>
+                                    <div class="banner-song">Love Ya</div>
+                                    <div class="banner-singer">Diljit Dosanjh</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/Udaarian.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(5)">
+                                    </div>
+                                    <div class="banner-song">Udaarian</div>
+                                    <div class="banner-singer">Satinder Sartaj</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/Baller.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(11)">
+                                    </div>
+                                    <div class="banner-song">Baller</div>
+                                    <div class="banner-singer">Shubh</div>
+                                </div>
+                            </div>
+                            <h1 class="title-list">Artists You Like</h1>
+                            <div class="list-container">
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/mix_jass.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(12)">
+                                    </div>
+                                    <div class="banner-song">Jass Manak Mix</div>
+                                    <div class="banner-singer">Playlist</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/mix_diljit.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(0)">
+                                    </div>
+                                    <div class="banner-song">Diljit Dosanjh Mix</div>
+                                    <div class="banner-singer">Playlist</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/mix_karan.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(1)">
+                                    </div>
+                                    <div class="banner-song">Karan Aujla Mix</div>
+                                    <div class="banner-singer">Playlist</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/mix_amrit.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(13)">
+                                    </div>
+                                    <div class="banner-song">Amrit Mann Mix</div>
+                                    <div class="banner-singer">Playlist</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/mix_jasmine.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(14)">
+                                    </div>
+                                    <div class="banner-song">Jasmine Sandlas Mix</div>
+                                    <div class="banner-singer">Playlist</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/mix_taylor.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(7)">
+                                    </div>
+                                    <div class="banner-song">Taylor Swift Mix</div>
+                                    <div class="banner-singer">Playlist</div>
+                                </div>
+                                <div class="track-outer-cont">
+                                    <div class="img-cont">
+                                        <img class="banner-main" src="./Images/mix_jordan.jpeg">
+                                        <img class="play-button" src="./Icons/play-main.svg" onclick="loadTrack(15)">
+                                    </div>
+                                    <div class="banner-song">Jordan Sandhu Mix</div>
+                                    <div class="banner-singer">Playlist</div>
                                 </div>
                             </div>
                         </div>
                     </div>
             </div>
-            <div id="view-detail-cont">Hello</div>
+            <div id="view-detail-cont">
+                <h2 class="name" id="detail-banner-title"></h2>
+                <div class="detail-banner-cont">
+                    <img id="detail-banner"></img>
+                </div>
+                <div id="artist-cont" >
+                    <h3 class="singer">Singer</h3>
+                    <div class="singer-d1">
+                        <p>54,123,173 montly listeners</p>
+                        <button id="follow-button">Follow</button>
+                    </div>
+                    <h3 class="about-artist-text">About the artist</h3>
+                    <p class="singer-about">He is not just a singer, but a true artist whose talent transcends mere musical ability. His voice has the power to uplift, inspire, and move audiences in ways that are nothing short of extraordinary, solidifying his place as one of the most wonderful singers of his generation.</p>
+                </div>
+            </div>
         </div>
 
 
@@ -183,11 +494,11 @@
         <div class="bottom">
             <div id="song-cont">
                 <div class="b-banner-cont" id="banner_ele" onclick="toogleView()">
-                    <div class="banner-up">&lt;</div>
+                    <div class="banner-up"><img src="/Icons/open-view.svg" id="toggleIcon"></div>
                 </div>
                 <div class="song-desp-cont">
-                    <div class="song-name name">Love Ya</div>
-                    <div class="song-singer singer">Diljit Dosanjh</div>
+                    <div class="song-name name">---</div>
+                    <div class="song-singer singer">-------</div>
                 </div>
                 <button class="heart-cont tooltip-cont" onclick="toogleHeartColor()">
                     <svg viewBox="-2.4 -2.4 28.80 28.80" fill="#000" xmlns="http://www.w3.org/2000/svg">
@@ -271,16 +582,15 @@
             </div>
         </div>
     </div>
-
-    <button popovertarget="not-avail">Install App</button>
     <div popover id="not-avail" class="pop-over">This feature is not available yet!</div>
     <div popover id="not-premium" class="pop-over">That's all we have! Enjoy it without PREMIUM</div>
     <div popover id="not-install" class="pop-over">Not available! Enjoy everything on website.</div>
     <div popover id="no-notification" class="pop-over">No NOTIFICATIONS!</div>
     <div popover id="profile-dashboard" class="pop-over">Made with &hearts; by <b>NAVJOT SINGH</b></div>
     <audio id="audio" src="">
-        <script src="./Scripts/script-index.js"></script>
-        <script src="./Scripts/audio.js"></script>
+        
+    <script src="./Scripts/script-index.js"></script>
+    <script src="./Scripts/audio.js"></script>
+    
 </body>
-
 </html>

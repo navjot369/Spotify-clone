@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-
 * {
     box-sizing: border-box;
 }
@@ -8,9 +6,9 @@
 }
 body {
     background-color: black;
-    overflow: hidden;
+    overflow:hidden;
     margin: 0;
-    font-family: 'Varela Round', sans-serif;
+    font-family: var(--font-family,CircularSpTitle,CircularSpTitle-Tall,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
     color: white;
     cursor: default;
 }
@@ -19,7 +17,7 @@ body {
     border: 8px solid transparent;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: calc(100vh - 71px) 55px;
+    grid-template-rows: calc(100vh - 79px) 55px;
     gap: 8px;
 }
 a{
@@ -53,6 +51,7 @@ button {
     width: 100%;
     opacity: 0;
     transition: all 200ms ease-in 0s;
+    z-index: 100;
 }
 .tooltip span{
     background-color: rgba(85, 85, 85, 1);
@@ -75,4 +74,34 @@ button {
 .tooltip-bottom {
     top: 120%;
     left: 50%;
+}
+
+#loading-anim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background: #020202;
+    animation: 0.3s linear 1s 1 load-anim-cont2;
+}
+@keyframes load-anim-cont2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+#loading-anim img {
+    width: 2rem;
+    height: 2rem;
+    margin: 5px;
+}
+#loading-anim h1 {
+    font-size: 1.7rem;
 }

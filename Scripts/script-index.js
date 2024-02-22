@@ -22,7 +22,7 @@ function toogleSidebar() {
             listText[i].style.display = "flex";
         }
     }
-    setTimeout(adjustMainWindow, 4000);
+    setTimeout(adjustMainWindow, 210);
 }
 
 /* Setting to current timings */
@@ -57,11 +57,15 @@ function toogleView(){
     let element = document.getElementById("view-detail-cont");
     if(element.style.width != "400px") {
         element.style.width = "400px";
+        element.style.opacity = "1";
+        document.getElementById("toggleIcon").style.opacity = "1";
     } 
     else{
         element.style.width = "0";
+        element.style.opacity = "0";
+        document.getElementById("toggleIcon").style.opacity = "0.3";
     }
-    adjustMainWindow();
+    setTimeout(adjustMainWindow, 210);
 }
 
 let red = Math.random() * 200 + 56;
@@ -81,11 +85,61 @@ function mainbgEffect() {
 }
 mainbgEffect();
 mainEle.addEventListener("scroll", mainbgEffect);
+window.addEventListener("resize", adjustMainWindow);
 
 function adjustMainWindow() {
     let w = mainEle.offsetWidth;
-    if(w < 800) {
-        let ele =  document.querySelector("times-playlist-cont");
-        ele.style.gridTemplateColumns = "repeat(2, 1fr)";
+    console.log(w);
+    let eleTop =  document.querySelector(".times-playlist-cont");
+    let eleListCont = document.querySelectorAll(".list-container");
+    let eleList = document.querySelectorAll(".track-outer-cont");
+    eleList.forEach(item => item.style.display = "none");
+    if(w < 500) {
+        eleTop.style.gridTemplateColumns = "repeat(1, 1fr)";
+        eleListCont.forEach(item => item.style.gridTemplateColumns = "repeat(2, 1fr)");
+        document.querySelectorAll(".track-outer-cont:nth-of-type(-n+2)").forEach(item => item.style.display = "block");
     }
+    else if(w < 800) {
+        eleTop.style.gridTemplateColumns = "repeat(2, 1fr)";
+        eleListCont.forEach(item => item.style.gridTemplateColumns = "repeat(4, 1fr)");
+        document.querySelectorAll(".track-outer-cont:nth-of-type(-n+4)").forEach(item => item.style.display = "block");
+    }
+    else if(w < 1000) {
+        eleTop.style.gridTemplateColumns = "repeat(3, 1fr)";
+        eleListCont.forEach(item => item.style.gridTemplateColumns = "repeat(5, 1fr)");
+        document.querySelectorAll(".track-outer-cont:nth-of-type(-n+5)").forEach(item => item.style.display = "block");
+    }
+    else if(w < 1150) {
+        eleTop.style.gridTemplateColumns = "repeat(3, 1fr)";
+        eleListCont.forEach(item => item.style.gridTemplateColumns = "repeat(6, 1fr)");
+        document.querySelectorAll(".track-outer-cont:nth-of-type(-n+6)").forEach(item => item.style.display = "block");
+    }
+    else if(w < 1400) {
+        eleTop.style.gridTemplateColumns = "repeat(3, 1fr)";
+        eleListCont.forEach(item => item.style.gridTemplateColumns = "repeat(7, 1fr)");
+        document.querySelectorAll(".track-outer-cont:nth-of-type(-n+7)").forEach(item => item.style.display = "block");
+    }
+    else {
+        eleTop.style.gridTemplateColumns = "repeat(3, 1fr)";
+        eleListCont.forEach(item => item.style.gridTemplateColumns = "repeat(8, 1fr)");
+        document.querySelectorAll(".track-outer-cont:nth-of-type(-n+8)").forEach(item => item.style.display = "block");}
 }
+adjustMainWindow();
+
+
+document.getElementById("follow-button").addEventListener("click", (e) => {
+    let ele = e.target;
+    if(ele.style.background == "transparent") {
+        ele.style.color =  "black";
+        ele.style.background = "white";
+        setTimeout(() => ele.innerHTML = "Follow", 200);
+    }else {
+        ele.style.color = "white";
+        ele.style.background = "transparent";
+        setTimeout(() => ele.innerHTML = "Unfollow", 200);
+    }
+})
+
+setTimeout(() => {
+    document.getElementById("loading-anim").style.display = "none";
+}, 1250);

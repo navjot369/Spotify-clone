@@ -52,6 +52,7 @@ function prevSong() {
 
 function loadTrack(ind) {
     clearInterval(syncId);
+    localStorage.setItem("song", ind);
     if(ind < 0){
         ind = songs.length - 1;
     }
@@ -61,13 +62,16 @@ function loadTrack(ind) {
 
     BannerEle.style.backgroundImage = "url('./Images/" + current.banner + "')";
     audioEle.setAttribute('src', "./Songs/" + current.audio);
+    document.getElementById("detail-banner").setAttribute("src", "./Images/" + current.banner);
+    document.getElementById("detail-banner").style.boxShadow = "0 0 20px #121212";
+    document.getElementById("view-detail-cont").style.background =  current.color;
     setName.forEach((ele) => {
         ele.innerHTML = current.name;
     })
     setSinger.forEach((ele) => {
         ele.innerHTML = current.singer;
     })
-    // audioEle.play();
+    audioEle.play();
 
     syncId = setInterval(audioSync, 1000);
 }
@@ -149,17 +153,126 @@ let songs = [
         banner: "love-ya.jpeg",
         audio: "Love-Ya.mp3",
         singer: "Diljit Dosanjh",
-        lang: "pb",
-        color: "#6B009D"
+        color: "#7A20AA"
     },
     {
-        name: "Sofly",
+        name: "Softly",
         banner: "softly.jpeg",
         audio: "softly.mp3",
         singer: "Karan Aujla",
-        lang: "pb",
+        color: "#644471"
+    }, 
+    {
+        name: "100 Million",
+        banner: "100_Million.jpeg",
+        audio: "100_Million.mp3",
+        singer: "Divine",
+        color: "#111415"
+    },
+    {
+        name: "Straight Ballin",
+        banner: "street-dreams.jpeg",
+        audio: "Straight Ballin.mp3",
+        singer: "Karan Aujla",
+        color: "#CC1313"
+    },
+    {
+        name: "Chandigarh Ka Chokra",
+        banner: "Chandigarh Ka Chokra.jpeg",
+        audio: "Chandigarh Ka Chokra.mp3",
+        singer: "Sunanda Sharma",
+        color: "#D9596A"
+    },
+    {
+        name: "Udaarian",
+        banner: "Udaarian.jpeg",
+        audio: "Udaarian.mp3",
+        singer: "Satinder Sartaj",
+        color: "#552724"
+    },
+    {
+        name: "Saade Kothe Utte",
+        banner: "Saade Kothe Utte.jpeg",
+        audio: "Saade Kothe Utte.mp3",
+        singer: "Ammy Virk",
+        color: "#2A7A73"
+    },
+    {
+        name: "Blank Space",
+        banner: "Black Space.jpeg",
+        audio: "Black Space.mp3",
+        singer: "Taylow Swift",
+        color: "#39384B"
+    },
+    {
+        name: "Stronger",
+        banner: "Stronger.jpeg",
+        audio: "Stronger.mp3",
+        singer: "Kayne West",
+        color: "#EA078A"
+    },
+    {
+        name: "Money",
+        banner: "Money.jpeg",
+        audio: "Money.mp3",
+        singer: "Lisa",
+        color: "#927E32"
+    },
+    {
+        name: "Photo",
+        banner: "Photo.jpeg",
+        audio: "Photo.mp3",
+        singer: "Nimrat Khaira",
+        color: "#90873D"
+    },
+    {
+        name: "Baller",
+        banner: "Baller.jpeg",
+        audio: "Baller.mp3",
+        singer: "Shubh",
+        color: "#1F1F1D"
+    },
+    {
+        name: "Shaka Laka Boom Boom",
+        banner: "Bad munda.jpeg",
+        audio: "Shaka Laka Boom Boom.mp3",
+        singer: "Jass Manak",
+        color: "#25B294"
+    },
+    {
+        name: "Combination",
+        banner: "Combination.jpeg",
+        audio: "Combination.mp3",
+        singer: "Amrit Mann",
+        color: "#A60405"
+    },
+    {
+        name: "Ittar",
+        banner: "Ittar.jpeg",
+        audio: "Ittar.mp3",
+        singer: "Jasmine Sandlas",
+        color: "#B90D0B"
+    },
+    {
+        name: "Black Effect",
+        banner: "Black Effect.jpeg",
+        audio: "Black Effect.mp3",
+        singer: "Jordan Sandhu",
+        color: "#583F48"
+    },
+    {
+        name: "Ittar",
+        banner: "Ittar.jpeg",
+        audio: "Ittar.mp3",
+        singer: "Jasmine Sandlas",
         color: "#644471"
     }
 ];
 
-loadTrack(curr_ind);
+curr_ind = localStorage.getItem("song")
+if(localStorage.getItem("song")) {
+    loadTrack(curr_ind);
+}
+else{
+    loadTrack(0);
+}
