@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-type" href="./../Icons/icon.svg">
+    <title>Login-Spotify</title>
+    <link href="./new-user.css" rel="stylesheet">
+</head>
+<body>
+    <div id="container-main">
+        <div id="login-img-cont">
+            <div class="data-check-outer-cont" id="age-more">
+                <p id="age-check"><span></span>Age should be 18+</p>
+            </div>
+            <div class="data-check-outer-cont" id="pass-check">
+                <p id="pass-len"><span>&#10060;</span>Password should be 8 characters long</p>
+                <p id="pass-upper"><span>&#10060;</span>Password should contain Uppercase alphabets</p>
+                <p id="pass-lower"><span>&#10060;</span>Password should contain Lowercase alphabets</p>
+                <p id="pass-num"><span>&#10060;</span>Password should contain Numbers</p>
+                <p id="pass-symbol"><span>&#10060;</span>Password should contain Special Symbols(@, #. $..)</p>
+            </div>
+            <div class="data-check-outer-cont" id="pass-match">
+                <p id="pass-match-p"><span>&#10060;</span>Both the passwords should MATCH</p>
+            </div>
+        </div>
+        <div id="container-outer">
+            <div id="logo-cont">
+                <img src="./../Icons/icon.svg">
+                <p> Register to Spotify</p>
+            </div>
+            <div class="form-outer-cont">
+                <form id="new-user-form" action="/">
+                    <div class="input-outer-cont">
+                        <div class="img-cont-input">
+                            <img src="./../Icons/profile-circle.svg" class="input-prev-icon">
+                        </div>
+                        <div  class="input-cont">
+                            <input type="text" id="fname" class="input-ele" placeholder="." required>
+                            <label for="fname" class="login-label">Full Name</label>
+                        </div>
+                    </div>
+                    <div class="input-outer-cont">
+                        <div class="img-cont-input">
+                            <img src="./../Icons/calender.svg" class="input-prev-icon">
+                        </div>
+                        <div  class="input-cont">
+                            <input type="text" id="dob" class="input-ele" placeholder="." required>
+                            <label for="dob" class="login-label">Date of birth</label>
+                        </div>
+                    </div>
+                    <div class="input-outer-cont">
+                        <div class="img-cont-input">
+                            <img src="./../Icons/mail.svg" class="input-prev-icon">
+                        </div>
+                        <div  class="input-cont">
+                            <input type="email" id="mail" class="input-ele" placeholder="." required>
+                            <label for="mail" class="login-label">E-mail</label>
+                        </div>
+                    </div>
+                    <div class="input-outer-cont">
+                        <div class="img-cont-input">
+                            <img src="./../Icons/eye-closed.svg" onclick="showPass(1)" class="input-prev-icon" id="pass-toggle1" title="Show/Hide Password">
+                        </div> 
+                        <div class="input-cont">
+                            <input type="password" class="input-ele" placeholder="." id="password-ele1" required>
+                            <label for="password-ele1" class="login-label">New Password</label>
+                        </div>
+                    </div>
+                    <div class="input-outer-cont">
+                        <div class="img-cont-input">
+                            <img src="./../Icons/eye-closed.svg" onclick="showPass(2)" class="input-prev-icon" id="pass-toggle2" title="Show/Hide Password">
+                        </div> 
+                        <div class="input-cont">
+                            <input type="password" class="input-ele" placeholder="." id="password-ele2" required>
+                            <label for="password-ele2" class="login-label">Confirm Password</label>
+                        </div>
+                    </div>
+                    <button type="submit" id="submit-button">Register</button>
+                    <div id="other-opt-cont">
+                        <p>Already have an account&quest;</p>
+                        <a id="loginHere">Login here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./new-user.js"></script>
+</body>
+</html>

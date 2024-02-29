@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-type" href="./../Icons/icon.svg">
+    <title>Login-Spotify</title>
+    <link href="./login.css" rel="stylesheet">
+</head>
+<body>
+    <div id="container-main">
+        <div id="container-outer">
+            <div class="form-outer-cont">
+                <div id="logo-cont">
+                    <img src="./../Icons/icon.svg">
+                    <p> Log in to Spotify</p>
+                </div>
+                <form id="user-login-form" action="/">
+                    <div class="input-outer-cont">
+                        <div class="img-cont-input">
+                            <img src="./../Icons/profile-circle.svg" class="input-prev-icon">
+                        </div>
+                        <div  class="input-cont">
+                            <input type="text" id="username" class="input-ele" placeholder="." required>
+                            <label for="username" class="login-label">Username</label>
+                        </div>
+                    </div>
+                    <div class="input-outer-cont">
+                        <div class="img-cont-input">
+                            <img src="./../Icons/eye-closed.svg" onclick="showPass()" class="input-prev-icon" id="pass-toggle" title="Show/Hide Password">
+                        </div> 
+                        <div class="input-cont">
+                            <input type="password" class="input-ele" placeholder="." id="password-ele" required>
+                            <label for="password-ele" class="login-label">Password</label>
+                        </div>
+                    </div>
+                    <button type="submit" id="submit-button">Submit</button>
+                    <div id="other-opt-cont">
+                        <a href="#">Forget Password?</a>
+                        <a href="#" id="newUser">New User</a>
+                    </div>
+                </form>
+            </div>
+            <div id="or-cont-outer">
+                <div class="or-line"></div>OR<div class="or-line"></div>
+            </div>
+            <div id="login-social-cont">
+                <button class="social-buttons" style="background-color: red;">
+                    <img class="social-icons" src="./../Icons/google.svg">
+                    <p class="social-button-content">Login With Google</p>
+                </button>
+                <button class="social-buttons" style="background-color: black;">
+                    <img class="social-icons" src="./../Icons/apple.svg">
+                    <p class="social-button-content">Login With Apple</p>
+                </button>
+                <button class="social-buttons" style="background-color: blue;">
+                    <img class="social-icons" src="./../Icons/facebook.svg">
+                    <p class="social-button-content">Login With Facebook</p>
+                </button>
+            </div>
+        </div>
+        <div id="login-img-cont"></div>
+    </div>
+    <script src="./login.js"></script>
+</body>
+</html>

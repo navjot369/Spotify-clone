@@ -159,9 +159,13 @@
                                 <img src="./Icons/bell.svg">
                                 <div class="tooltip tooltip-bottom"><span>Notifications</span></div>
                             </button>
-                            <button popovertarget="profile-dashboard" class="profile-cont tooltip-cont">
-                                <span>N</span>
-                                <div class="tooltip tooltip-bottom"><span>Navjot Singh</span></div>
+                            <button id="login-button" onclick="window.location.href='./log-in/login.html'" class="login-cont tooltip-cont">
+                                <span>Log&nbsp;In</span>
+                                <div class="tooltip tooltip-bottom"><span>Login/Signup</span></div>
+                            </button>
+                            <button id="profile-button" popovertarget="profile-dashboard" class="profile-cont tooltip-cont">
+                                <span id="user-icon">N</span>
+                                <div class="tooltip tooltip-bottom"><span id="user-name">Navjot Singh</span></div>
                             </button>
                         </div>
 
@@ -591,6 +595,6 @@
         
     <script src="./Scripts/script-index.js"></script>
     <script src="./Scripts/audio.js"></script>
-    
+    <script src="./Scripts/login.js"></script>
 </body>
 </html>

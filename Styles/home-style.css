@@ -108,6 +108,15 @@
     width: 20px;
     height: 20px;
 }
+.login-cont {
+    padding: 8px 12px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    font-size: 12px;
+    font-weight: bolder;
+    margin: 0 5px;
+}
 .profile-cont {
     background-color: #106079;
     display: flex;

@@ -129,7 +129,7 @@ adjustMainWindow();
 
 document.getElementById("follow-button").addEventListener("click", (e) => {
     let ele = e.target;
-    if(ele.style.background == "transparent") {
+    if(ele.style.color == "white") {
         ele.style.color =  "black";
         ele.style.background = "white";
         setTimeout(() => ele.innerHTML = "Follow", 200);
