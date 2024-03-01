@@ -159,16 +159,16 @@
                                 <img src="./Icons/bell.svg">
                                 <div class="tooltip tooltip-bottom"><span>Notifications</span></div>
                             </button>
-                            <button id="login-button" onclick="window.location.href='./log-in/login.html'" class="login-cont tooltip-cont">
-                                <span>Log&nbsp;In</span>
-                                <div class="tooltip tooltip-bottom"><span>Login/Signup</span></div>
-                            </button>
-                            <button id="profile-button" popovertarget="profile-dashboard" class="profile-cont tooltip-cont">
+                            <button id="profile-button" class="profile-cont" onclick="toggleUserInfo()">
                                 <span id="user-icon">N</span>
-                                <div class="tooltip tooltip-bottom"><span id="user-name">Navjot Singh</span></div>
                             </button>
+                            <div id="user-info-cont">
+                                <button id="user-name">Navjot</button>
+                                <button id="login-button" onclick="logout()">Log&nbsp;Out</button>
+                                <button>Settings</button>
+                                <button>About</button>
+                            </div>
                         </div>
-
                     </div>
                     <div id="main-inner-cont">
                         <div id="wishing-cont">
@@ -590,11 +590,9 @@
     <div popover id="not-premium" class="pop-over">That's all we have! Enjoy it without PREMIUM</div>
     <div popover id="not-install" class="pop-over">Not available! Enjoy everything on website.</div>
     <div popover id="no-notification" class="pop-over">No NOTIFICATIONS!</div>
-    <div popover id="profile-dashboard" class="pop-over">Made with &hearts; by <b>NAVJOT SINGH</b></div>
     <audio id="audio" src="">
         
     <script src="./Scripts/script-index.js"></script>
     <script src="./Scripts/audio.js"></script>
-    <script src="./Scripts/login.js"></script>
 </body>
 </html>

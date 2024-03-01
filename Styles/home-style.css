@@ -128,9 +128,28 @@
     font-size: 19px;
     border: 2px solid rgba(30, 30, 30);
 }
-.profile-cont .tooltip {
-    left: -20px;
+#user-info-cont {
+    position: fixed;
+    top: 70px;
+    right: 40px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    opacity: 0;
+    transition: all 300ms linear 0s;
 }
+#user-info-cont button {
+    padding: 5px 10px;
+    color: #111;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#user-info-cont button:hover {
+    background-color: #ddd;
+    transform: none;
+}
+
 #main-inner-cont {
     width: 100%;
     padding: 10px 0 20px 20px;

@@ -35,7 +35,7 @@ let dateEle = document.getElementById("dob");
 dateEle.addEventListener("focus", e => {
     e.target.setAttribute("type", "date");
     if(e.target.value === "") {
-        e.target.value = "1111-11-11"
+        e.target.value = "2004-03-06"
     }
 })
 
@@ -219,4 +219,8 @@ form.addEventListener("submit", (e) => {
         document.getElementById("pass-match").style.display = "flex";
         return;
     }
+
+    localStorage.setItem("user", document.getElementById("fname").value);
+    window.location.href = "/";
+
 });

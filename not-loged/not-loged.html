@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link href="./../Styles/style-index.css" rel="stylesheet" />
+    <link href="./../Styles/sidebar-style.css" rel="stylesheet" />
+    <link href="./../Styles/home-style.css" rel="stylesheet" />
+    <link href="./not-logged.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="loading-anim">
+      <img src="/Icons/icon.svg" />
+      <h1>Spotify</h1>
+    </div>
+    <div class="main-container">
+      <div class="sidebar">
+        <div class="side-top sidebar-inn">
+          <div id="top-left-icon">
+            <img src="/Icons/icon.svg" />
+            <h1>Spotify</h1>
+          </div>
+          <button class="sidebar-top-link">
+            <div class="sidebar-icon-cont">
+              <div class="svg-icon-cont">
+                <img src="/Icons/house.svg" class="svg-icons" />
+              </div>
+              <div class="sidebar-top-title">Home</div>
+            </div>
+          </button>
+          <button class="sidebar-top-link">
+            <div class="sidebar-icon-cont">
+              <div class="svg-icon-cont">
+                <img src="/Icons/search.svg" class="svg-icons" />
+              </div>
+              <div class="sidebar-top-title">Search</div>
+            </div>
+          </button>
+        </div>
+        <div class="side-bottom sidebar-inn">
+          <button
+            class="toogle-button sidebar-icon-cont sidebar-top-link"
+          >
+            <div class="svg-icon-cont">
+              <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none">
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    opacity="0.5"
+                    d="M19.5617 7C19.7904 5.69523 18.7863 4.5 17.4617 4.5H6.53788C5.21323 4.5 4.20922 5.69523 4.43784 7M17.4999 4.5C17.5283 4.24092 17.5425 4.11135 17.5427 4.00435C17.545 2.98072 16.7739 2.12064 15.7561 2.01142C15.6497 2 15.5194 2 15.2588 2H8.74099C8.48035 2 8.35002 2 8.24362 2.01142C7.22584 2.12064 6.45481 2.98072 6.45704 4.00434C6.45727 4.11135 6.47146 4.2409 6.49983 4.5"
+                    stroke="#fff"
+                    stroke-width="1.5"
+                  ></path>
+                  <path
+                    d="M15 18H9"
+                    stroke="#aaa"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M2.38351 13.793C1.93748 10.6294 1.71447 9.04765 2.66232 8.02383C3.61017 7 5.29758 7 8.67239 7H15.3276C18.7024 7 20.3898 7 21.3377 8.02383C22.2855 9.04765 22.0625 10.6294 21.6165 13.793L21.1935 16.793C20.8437 19.2739 20.6689 20.5143 19.7717 21.2572C18.8745 22 17.5512 22 14.9046 22H9.09536C6.44881 22 5.12553 22 4.22834 21.2572C3.33115 20.5143 3.15626 19.2739 2.80648 16.793L2.38351 13.793Z"
+                    stroke="#fff"
+                    id="toggle-fill"
+                    stroke-width="1.5"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="sidebar-top-title">Your Library</div>
+          </button>
+          <div class="create-cont">
+            <h1>Create your first playlist</h1>
+            <p>Is's easy we will help you find them</p>
+            <button>Create playlist</button>
+          </div>
+          <div class="create-cont">
+            <h1>Let's find some podcasts</h1>
+            <p>We will keep you updated on new episodes</p>
+            <button>Browse Podcasts</button>
+          </div>
+          <div class="legal-cont">
+            <div class="link-cont">
+              <a href="#">Legal</a>
+              <a href="#">Safety</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Cookies</a>
+              <a href="#">About Ads</a>
+              <a href="#">Accessibility</a>
+            </div>
+            <button class="lang-button">
+              <img src="./../Icons/language.svg" /><span>English</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="main">
+        <div id="home-cont">
+          <div id="home-top-bar">
+            <div class="navigation-cont">
+              <button class="back-go tooltip-cont">
+                <img class="navigation-icon" src="./../Icons/back-nav.svg" />
+                <div class="tooltip tooltip-bottom"><span>Go Back</span></div>
+              </button>
+              <button class="forward-go tooltip-cont">
+                <img
+                  class="navigation-icon forward-nav"
+                  src="./../Icons/back-nav.svg"
+                />
+                <div class="tooltip tooltip-bottom">
+                  <span>Go Forward</span>
+                </div>
+              </button>
+              </div>
+              <div class="top-nav-right-cont">
+              <button id="login-button" onclick="signUp()" class="login-cont">
+                <span>Sign&nbsp;Up</span>
+              </button>
+              <button id="signup-button" onclick="logIn()" class="login-cont">
+                <span>Log&nbsp;In</span>
+              </button>
+            </div>
+          </div>
+          <div id="main-inner-cont">
+            <h1 class="title-list">Spotify Playlists</h1>
+            <div class="list-container">
+                <div class="track-outer-cont">
+                    <div class="img-cont">
+                        <img class="banner-main" src="./../Images/viral50_global.jpg">
+                        <img class="play-button" src="./../Icons/play-main.svg" onclick="popup('./../Images/viral50_global.jpg', '#543A55')">
+                    </div>
+                    <div class="banner-song">Viral 50 - Global</div>
+                    <div class="banner-singer">Your daily update of the most viral tracks</div>
+                </div>
+                <div class="track-outer-cont">
+                    <div class="img-cont">
+                        <img class="banner-main" src="./../Images/diljit_banner.jpeg">
+                        <img class="play-button" src="./../Icons/play-main.svg" onclick="popup('./../Images/diljit_banner.jpeg', '#784118')">
+                    </div>
+                    <div class="banner-song">Diljit Dosanjh</div>
+                    <div class="banner-singer">Just relax back and enjoy the beats</div>
+                </div>
+                <div class="track-outer-cont">
+                    <div class="img-cont">
+                        <img class="banner-main" src="./../Images/group1_pb.jpeg">
+                        <img class="play-button" src="./../Icons/play-main.svg" onclick="popup('./../Images/group1_pb.jpeg', '#FF8B36')">
+                    </div>
+                    <div class="banner-song">Punjabi Pump</div>
+                    <div class="banner-singer">Catch the hottest punjabi tracks</div>
+                </div>
+                <div class="track-outer-cont">
+                    <div class="img-cont">
+                        <img class="banner-main" src="./../Images/kanye_thisis.jpg">
+                        <img class="play-button" src="./../Icons/play-main.svg" onclick="popup('./../Images/kanye_thisis.jpg', '#D73146', '#F67373')">
+                    </div>
+                    <div class="banner-song">This is Kayne West</div>
+                    <div class="banner-singer">Kick back to the recent and new chill beats</div>
+                </div>
+                <div class="track-outer-cont">
+                    <div class="img-cont">
+                        <img class="banner-main" src="./../Images/lofi_beats.jpeg">
+                        <img class="play-button" src="./../Icons/play-main.svg" onclick="popup('./../Images/lofi_beats.jpeg', '#2E3273')">
+                    </div>
+                    <div class="banner-song">Lofi beats</div>
+                    <div class="banner-singer">chill beats, lofi vibes, new tracks every week...</div>
+                </div>
+            </div>
+          </div>
+          <footer>
+            <div id="footer-top-cont">
+                <div id="footer-left-cont">
+                    <div class="footer-links-cont">
+                        <h5>Company</h5>
+                        <a href="#">About</a>
+                        <a href="#">Jobs</a>
+                        <a href="#">Record</a>
+                    </div>
+                    <div class="footer-links-cont">
+                        <h5>Communities</h5>
+                        <a href="#">For Artists</a>
+                        <a href="#">Developers</a>
+                        <a href="#">Advertising</a>
+                        <a href="#">Investing</a>
+                        <a href="#">Vendors</a>
+                    </div>
+                    <div class="footer-links-cont">
+                        <h5>Useful links</h5>
+                        <a href="#">Support</a>
+                        <a href="#">Android App</a>
+                        <a href="#">Ios App</a>
+                    </div>
+                </div>
+                <div id="footer-right-cont">
+                    <div class="social-conts"><img src="./../Icons/twitter.svg"></div>
+                    <div class="social-conts"><img src="./../Icons/instagram.svg"></div>
+                    <div class="social-conts"><img src="./../Icons/facebook.svg"></div>
+                </div>
+            </div>
+            <div id="footer-bottom">
+                <span>@ Spotify 2024 - made by Navjot Singh</span>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="bottom-text-cont">
+          <h6>Preview of Spotify</h6>
+          <p>
+            Sign in to get unlimited songs and podcasts with occasional ads. No
+            credit card needed
+          </p>
+        </div>
+        <a class="bottom-signin" onclick="signUp()">Sign Up</a>
+      </div>
+    </div>
+    <div id="pop-outer-cont">
+        <div id="pop-close-space" onclick="closepop()"></div>
+        <div id="pop-inner-cont">
+            <img id="popImg" src="./../Images/Bad munda.jpeg">
+            <div id="pop-up-opt">
+                <h1>Start listening with a free Spotify Account</h1>
+                <button id="pop-signup" onclick="logIn()">Sign Up</button>
+                <button id="pop-download">Download App</button>
+                <p>Already have an account?<span id="pop-login" onclick="logIn()">Log in</span></p>
+            </div>
+        </div>
+        <button id="close-btn" onclick="closepop()">Close</button>
+    </div>
+    <div id="visit-outer-cont">
+        <div id="visit-inner-cont"></div>
+    </div>
+    <script src="not-logged.js"></script>
+  </body>
+</html>

@@ -1,4 +1,12 @@
-console.log('Script Linked');
+let user = localStorage.getItem("user");
+if(!user || user.length == 0) {
+    window.location.href="./not-loged/not-loged.html";
+}
+else {
+    document.getElementById("user-icon").innerHTML = user[0].toUpperCase();
+    document.getElementById("user-name").innerHTML = user;
+}
+
 
 function toogleSidebar() {
     let elements = document.getElementsByClassName("sidebar-inner");
@@ -40,6 +48,23 @@ if(hour < 12) {
 }
 document.getElementById("good-times").innerHTML = wish;
 
+function toggleUserInfo() {
+    let UserInfo = document.getElementById("user-info-cont");
+    if(UserInfo.style.display == "block") {
+        UserInfo.style.opacity = "0";
+        setTimeout(() => {
+            UserInfo.style.display = "none";
+            document.body.removeEventListener("click", toggleUserInfo);
+        }, 300);
+    }
+    else {
+        UserInfo.style.display = "block";
+        setTimeout(() => {
+            UserInfo.style.opacity = "1";
+            document.body.addEventListener("click", toggleUserInfo);
+        }, 10);
+    }
+}
 
 function toogleHeartColor() {
     let element = document.getElementById("heart-svg");
@@ -89,7 +114,6 @@ window.addEventListener("resize", adjustMainWindow);
 
 function adjustMainWindow() {
     let w = mainEle.offsetWidth;
-    console.log(w);
     let eleTop =  document.querySelector(".times-playlist-cont");
     let eleListCont = document.querySelectorAll(".list-container");
     let eleList = document.querySelectorAll(".track-outer-cont");
@@ -143,3 +167,9 @@ document.getElementById("follow-button").addEventListener("click", (e) => {
 setTimeout(() => {
     document.getElementById("loading-anim").style.display = "none";
 }, 1250);
+
+
+function logout() {
+    localStorage.removeItem("user");
+    location.reload();
+}

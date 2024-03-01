@@ -102,6 +102,10 @@ body {
 .social-buttons:hover{
     filter: brightness(0.8);
 }
+#facebook-logo {
+    filter: invert(1);
+    transform: scale(1.2);
+}
 
 .form-outer-cont {
     display: flex;
@@ -163,7 +167,7 @@ body {
 
 
 #submit-button {
-    background-color: red;
+    background-color: #DB1B58;
     color: white;
     font-size: 1.3rem;
     font-weight: bold;
