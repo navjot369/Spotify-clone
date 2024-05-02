@@ -1,11 +1,10 @@
-let user = localStorage.getItem("user");
-if(!user || user.length == 0) {
-    window.location.href="./not-loged/not-loged.html";
-}
-else {
-    document.getElementById("user-icon").innerHTML = user[0].toUpperCase();
-    document.getElementById("user-name").innerHTML = user;
-}
+// let user = localStorage.getItem("user");
+// if(!user || user.length == 0) {
+//     // window.location.href="./not-loged/not-loged.html";
+// }
+// else {
+document.getElementById("user-icon").innerHTML = "N";
+document.getElementById("user-name").innerHTML = "Navjot Singh";
 
 
 function toogleSidebar() {
@@ -118,10 +117,10 @@ function adjustMainWindow() {
     let eleListCont = document.querySelectorAll(".list-container");
     let eleList = document.querySelectorAll(".track-outer-cont");
     eleList.forEach(item => item.style.display = "none");
-    if(w < 500) {
+    if(w < 600) {
         eleTop.style.gridTemplateColumns = "repeat(1, 1fr)";
-        eleListCont.forEach(item => item.style.gridTemplateColumns = "repeat(2, 1fr)");
-        document.querySelectorAll(".track-outer-cont:nth-of-type(-n+2)").forEach(item => item.style.display = "block");
+        eleListCont.forEach(item => item.style.gridTemplateColumns = "repeat(3, 1fr)");
+        document.querySelectorAll(".track-outer-cont:nth-of-type(-n+3)").forEach(item => item.style.display = "block");
     }
     else if(w < 800) {
         eleTop.style.gridTemplateColumns = "repeat(2, 1fr)";
